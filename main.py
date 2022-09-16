@@ -24,6 +24,7 @@ puntaje = 0             #Integer
 iniciar_trivia = True   #Booleano
 intentos = 0            #Integer
 lista = []              #Lista vacía
+punta_total = []        #Lista vacía
 
 #Entrada y presentaciones:
 usuario_name = input("Ingrese un nombre de usuario para la trivia: ").upper()
@@ -38,14 +39,18 @@ while iniciar_trivia == True:
     print(' ' * 25 + WHITE + f"Intento número {intentos}" + RESET)
     input('\n' + "Presiona" + RED + " ENTER " + RESET + "para continuar...")
 
+    os.system('clear')
+
     print('\n' + ' ' * 12 + WHITE + "¡Empecemos a jugar, cuenta regresiva en!" + RESET)
 
-    time.sleep(3)
+    time.sleep(3.1)
 
     #Carga inicial antes de empezar a jugar:
     for i in range(3, 0, -1):
         print(' ' * 31, i)
         time.sleep(1.1)
+    
+    os.system('clear')
 
     #Pregunta 1:
     pregunta1 = input('\n' + "Primera pregunta: ¿Quiénes crearon el Transistor?\n"
@@ -79,9 +84,6 @@ while iniciar_trivia == True:
     print('\n' + MAGENTA + f"Tu puntaje actual es de [{puntaje} Puntos / {PTS_TOTAL} Posibles]" + RESET)
 
     time.sleep(5)
-
-    col1 = input('\n' + "¿Cual es tu color favorito?: ")
-    lista.append(col1)
 
     #Refrescar la pantalla:
     input('\n' + "==> Presiona" + RED + " ENTER " + RESET + "para continuar con la 2° pregunta...")
@@ -121,9 +123,6 @@ while iniciar_trivia == True:
 
     time.sleep(5)
 
-    col2 = input('\n' + "¿Cual es tu segundo color favorito?: ")
-    lista.append(col2)
-
     #Refrescar la pantalla:
     input('\n' + "==> Presiona" + RED + " ENTER " + RESET + "para continuar con la 3° pregunta...")
     os.system("clear")
@@ -160,9 +159,6 @@ while iniciar_trivia == True:
     print('\n' + MAGENTA + f"Tu puntaje actual es de [{puntaje} Puntos / {PTS_TOTAL} Posibles]" + RESET)
 
     time.sleep(5)
-
-    col3 = input('\n' + "¿Cual es tu tercer color favorito?: ")
-    lista.append(col3)
 
     #Refrescar la pantalla:
     input('\n' + "==> Presiona" + RED + " ENTER " + RESET + "para continuar con la 4° pregunta...")
@@ -202,18 +198,21 @@ while iniciar_trivia == True:
 
     time.sleep(5)
     
-    print('\n' + WHITE + "Tus 3 colores favoritos son: " + RESET)
-    for i in lista:
-        print(WHITE + f"- {i}" + RESET)
-    
-    #Cuando se haga otro intento la lista empiece de nuevo vacía:
-    lista = []
+    #Agregando a las listas:
+    lista.append(intentos)
+    punta_total.append(puntaje)
 
     #Pregunta de intentos:
     repetir_trivia = input('\n' + MAGENTA + "¿Deseas intentar la trivia nuevamente? [S/N]: " + RESET).upper()
 
     if repetir_trivia != "S":
-        print('\n' + MAGENTA + "¡Buena suerte, espero la hayas pasado bien!" + RESET + '\n')
+        os.system('clear')
+        print('\n' + MAGENTA + "Tus puntajes fueron:" + RESET + '\n')
+        for i in range(1, len(lista)+1, 1):
+            x = i-1
+            print(MAGENTA + f"Intento numero {i} ==> Puntaje: {punta_total[x]}" + RESET)
+        
+        print('\n' + YELLOW + "¡Buena suerte, espero la hayas pasado bien!" + RESET + '\n')
         iniciar_trivia = False
     else:
         os.system("clear")
