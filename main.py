@@ -204,6 +204,8 @@ while iniciar_trivia == True:
 
     #Pregunta de intentos:
     repetir_trivia = input('\n' + MAGENTA + "¿Deseas intentar la trivia nuevamente? [S/N]: " + RESET).upper()
+    while repetir_trivia not in ("S", "N"):
+        repetir_trivia = input('\n' + RED + "Debes responder correctamente [S ó N]. Inténtalo nuevamente: " + RESET)
 
     if repetir_trivia != "S":
         os.system('clear')
