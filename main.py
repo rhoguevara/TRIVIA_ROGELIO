@@ -68,15 +68,19 @@ while iniciar_trivia == True:
     if pregunta1 == "a":
         puntaje += 20
         print('\n' + "¡Felicidades, la respuesta es correcta!")
+        print('\n' + "¡Se te sumará" + RED + " 20 " + RESET + "puntos")
     elif pregunta1 == "b":
         puntaje -= 10
         print('\n' + "¡Lo lamento, Gates creo Microsoft y Jobs y Wozniak crearon Apple!")
+        print('\n' + "¡Se te restará" + RED + " 10 " + RESET + "puntos")
     elif pregunta1 == "c":
         puntaje -= 10
         print('\n' + "¡Lo lamento, Oppenheimer, Heisenberg y Einstein era fisicos teoricos de la relatividad!")
+        print('\n' + "¡Se te restará" + RED + " 10 " + RESET + "puntos")
     elif pregunta1 == "d":
         puntaje -= 10
         print('\n' + "¡Lo lamento, Plank, Rutherford y Newton ni siquiera vivieron en la misma epoca!")
+        print('\n' + "¡Se te restará" + RED + " 10 " + RESET + "puntos")
     else:
         puntaje += 50
         print('\n' + "¡Felicidades, encontraste este mensaje secreto que te da la 'buena suerte'!")
@@ -106,15 +110,19 @@ while iniciar_trivia == True:
     if pregunta2 == "a":
         puntaje -= random.randint(10, 15)
         print('\n' + "¡Lo lamento, Lenovo es una empresa que se encuentra en Pekín - China!")
+        print('\n' + "¡Se te restará puntos random, entre" + RED + " (10 - 15) " + RESET + "puntos")
     elif pregunta2 == "b":
         puntaje += random.randint(25, 30)
         print('\n' + "¡Felicidades, la respuesta es correcta!")
+        print('\n' + "¡Se te sumará puntos random, entre" + RED + " (25 - 30) " + RESET + "puntos")
     elif pregunta2 == "c":
         puntaje -= random.randint(10, 15)
         print('\n' + "¡Lo lamento, Tencent es una empresa que esta en Taiwán!")
+        print('\n' + "¡Se te restará puntos random, entre" + RED + " (10 - 15) " + RESET + "puntos")
     elif pregunta2 == "d":
         puntaje -= random.randint(10, 15)
         print('\n' + "¡Lo lamento, solo una es correcta!")
+        print('\n' + "¡Se te restará puntos random, entre" + RED + " (10 - 15) " + RESET + "puntos")
     else:
         puntaje += 50
         print('\n' + "¡Felicidades, encontraste este mensaje secreto que te da la 'buena suerte'!")
@@ -143,15 +151,19 @@ while iniciar_trivia == True:
     if pregunta3 == "a":
         puntaje -= 13
         print('\n' + "¡Lo lamento, esta secuencia si es correcta!")
+        print('\n' + "¡Se te restará" + RED + " 13 " + RESET + "puntos")
     elif pregunta3 == "b":
         puntaje -= 13
         print('\n' + "¡Lo lamento, esta secuencia si es correcta!")
+        print('\n' + "¡Se te restará" + RED + " 13 " + RESET + "puntos")
     elif pregunta3 == "c":
         puntaje += 25
         print('\n' + "¡Felicidades, Linus Torvalds nunca trabajo en IBM desarrollando Linux!")
+        print('\n' + "¡Se te sumará" + RED + " 25 " + RESET + "puntos")
     elif pregunta3 == "d":
         puntaje -= 13
         print('\n' + "¡Lo lamento, esta secuencia si es correcta!")
+        print('\n' + "¡Se te restará" + RED + " 13 " + RESET + "puntos")
     else:
         puntaje += 50
         print('\n' + "¡Felicidades, encontraste este mensaje secreto que te da la 'buena suerte'!")
@@ -180,15 +192,19 @@ while iniciar_trivia == True:
     if pregunta4 == "a":
         puntaje += 5
         print('\n' + "¡Lo lamento, esta opción es casi correcta!")
+        print('\n' + "¡Se te sumará" + RED + " 5 " + RESET + "puntos")
     elif pregunta4 == "b":
         puntaje -= 5
         print('\n' + "¡Lo lamento, esta opción es incorrecta!")
+        print('\n' + "¡Se te restará" + RED + " 5 " + RESET + "puntos")
     elif pregunta4 == "c":
         puntaje = puntaje * 2
         print('\n' + "¡Felicidades, esta es la opción correcta!")
+        print('\n' + "¡Se te multiplicará" + RED + " x2 " + RESET + "el puntaje anterior")
     elif pregunta4 == "d":
         puntaje = puntaje / 2
         print('\n' + "¡Lo lamento, esta opción es la mas disparatada!")
+        print('\n' + "¡Se te dividirá" + RED + " /2 " + RESET + "el puntaje anterior")
     else:
         puntaje += 50
         print('\n' + "¡Felicidades, encontraste este mensaje secreto que te da la 'buena suerte'!")
